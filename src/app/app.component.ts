@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
+import { ItemComponent } from './item/item.component';
+import { SearchComponent } from './search/search.component';
+export interface Item {
+  id: string;
+  name: string;
+  price: number;
+  image: string;
+  description: string;
+}
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ItemComponent, SearchComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'angularexam';
-}
+export class AppComponent {}
