@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { ItemsService } from '../items.service';
 
 @Component({
   selector: 'app-item',
@@ -30,4 +31,8 @@ import { MatButtonModule } from '@angular/material/button';
 export class ItemComponent {
   @Input() everyitem: any;
   @Input() id!: string;
+  constructor(public ItemService: ItemsService) {}
+  addToCart(id: string) {
+    this.ItemService.addintoCart(id);
+  }
 }
