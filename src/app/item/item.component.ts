@@ -29,4 +29,5 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class ItemComponent {
   @Input() everyitem: any;
+  @Input() id!: string;
 }

@@ -9,4 +9,7 @@ export class ItemsService {
   getitems(): Promise<Item> {
     return fetch(`${API}/shop`).then((res) => res.json());
   }
+  getItemById(id: string) {
+    return fetch(`${API}/shop/${id}`).then((res) => res.json());
+  }
 }
