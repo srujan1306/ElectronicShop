@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { ItemComponent } from './item/item.component';
 import { SearchComponent } from './search/search.component';
 export interface Item {
@@ -12,7 +12,7 @@ export interface Item {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ItemComponent, SearchComponent],
+  imports: [RouterOutlet, RouterLink, ItemComponent, SearchComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

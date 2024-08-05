@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ItemComponent } from '../item/item.component';
 import { ItemsService } from '../items.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [ItemComponent],
+  imports: [ItemComponent, RouterLink],
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss',
 })

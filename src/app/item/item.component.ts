@@ -1,6 +1,6 @@
 import { Component, Input, input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
 
 import { MatIconModule } from '@angular/material/icon';
@@ -22,6 +22,7 @@ import { MatButtonModule } from '@angular/material/button';
     FormsModule,
     RouterLink,
     MatButtonModule,
+    RouterOutlet,
   ],
   templateUrl: './item.component.html',
   styleUrl: './item.component.scss',
