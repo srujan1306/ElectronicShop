@@ -11,7 +11,7 @@ import { Item } from '../app.component';
   styleUrl: './cart.component.scss',
 })
 export class CartComponent {
-  cartItem: any;
+  cartItem: any = [];
   constructor(private ItemService: ItemsService) {}
   ngOnInit() {
     this.loadItems();
@@ -19,5 +19,6 @@ export class CartComponent {
 
   loadItems() {
     this.cartItem = this.ItemService.getCartItems();
+    console.log('cart', this.cartItem.name);
   }
 }
